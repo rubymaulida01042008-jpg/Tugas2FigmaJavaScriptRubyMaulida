@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Pencatat Aktivitas Dinamis Ruby</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Manajer Tugas Harian</h1>
+        <p>Catat dan pantau produktivitas Anda dengan mudah</p>
+    </header>
+
+    <nav>
+        <button id="filter-semua" class="active">Semua Tugas</button>
+        <button id="filter-belum">Belum Selesai</button>
+        <button id="filter-selesai">Selesai</button>
+    </nav>
+
+    <main>
+        <section id="section-form">
+            <h2>Tambah Tugas Baru</h2>
+            <form id="form-tugas">
+                <div class="input-group">
+                    <label for="input-nama-tugas">Nama Aktivitas:</label>
+                    <input type="text" id="input-nama-tugas" placeholder="Misal: Belajar JavaScript..." required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="select-prioritas">Tingkat Prioritas:</label>
+                    <select id="select-prioritas">
+                        <option value="Tinggi">🔴 Tinggi</option>
+                        <option value="Sedang">🟡 Sedang</option>
+                        <option value="Rendah">🟢 Rendah</option>
+                    </select>
+                </div>
+                
+                <button type="submit" id="btn-tambah">Simpan Tugas</button>
+            </form>
+        </section>
+
+        <section id="section-list">
+            <h2>Daftar Aktivitas Anda</h2>
+            <div id="kontainer-tugas">
+                <article class="kartu-tugas">
+                    <h3>Contoh Tugas Pertama</h3>
+                    <p>Prioritas: <span class="badge-prioritas">Tinggi</span></p>
+                    <div class="aksi-tugas">
+                        <button class="btn-status">Selesai</button>
+                        <button class="btn-hapus">Hapus</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Proyek Web Ruby</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
